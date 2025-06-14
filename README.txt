@@ -22,6 +22,7 @@ This test plan covers end-to-end testing of the contact form functionality in th
 ### 3.1 WearenotchQaTask.feature
 - @SendMessageValidData
 - @SendMessageInvalidData
+- @SendMessageFailed
 
 ## 4. Test Case Details
 
@@ -43,6 +44,14 @@ This test plan covers end-to-end testing of the contact form functionality in th
 - Navigate to QA task page
 - Attempt to submit form without filling required fields
 - Verify validation messages for each required field
+
+### 4.3 @SendMessageFailed
+**Purpose**: Verify specific validation message for first name field failure.
+
+**Test Steps**:
+- Navigate to QA task page
+- Attempt to submit form without filling any fields
+- Verify specific validation message for first name field
 
 ## 5. Tools and Frameworks
 
@@ -84,6 +93,10 @@ npx bddgen; npx playwright test
 - **Invalid Data Test**: 
   ```bash
   npx bddgen; npx playwright test --grep /@SendMessageInvalidData/
+  ```
+- **Failed Validation Test**: 
+  ```bash
+  npx bddgen; npx playwright test --grep /@SendMessageFailed/
   ```
 
 ## 9. Expected Results

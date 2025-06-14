@@ -27,4 +27,12 @@ Feature: Qa Task scenario
     Then I should see "email" validation message "This field is required."
     Then I should see "privacy policy" validation message "This field is required."
 
+  @SendMessageFailed
+  Scenario: Send message with invalid data failed
+    Given I navigate to the qa task page
+    Then I should see the qa task page
+    And I click on button Send message
+    Then I should see "first name" validation message "failed validation"
+
+
 
