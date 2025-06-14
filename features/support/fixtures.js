@@ -1,5 +1,4 @@
 import { test as base, createBdd } from 'playwright-bdd';
-const PopupHelper = require('../../utils/PopupHelper');
 const { PageManager } = require('../../pageobjects/PageManager');
 
 
@@ -11,7 +10,6 @@ export const methods = base.extend({
 });
 
 export const { Given, Then, When, Before } = createBdd(methods);
-
 
 
 
