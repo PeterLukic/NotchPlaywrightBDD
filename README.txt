@@ -118,7 +118,6 @@ npx bddgen; npx playwright test
 - Test scripts in the repository
 - Feature file: `WearenotchQaTask.feature`
 - Test execution reports
-- Defect reports (if any)
 
 ## 11. Installation & Setup
 

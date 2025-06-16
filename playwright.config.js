@@ -52,6 +52,7 @@ module.exports = defineConfig({
       use: 
       { 
       //...devices['Desktop Chrome'],
+      video: 'on-first-retry',
       browserName: "chromium", 
       headless : false,
       //trace : "on",
