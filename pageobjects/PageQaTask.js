@@ -37,7 +37,7 @@ class PageQaTask {
             'first name': 'This field is required.',
             'last name': 'This field is required.',
             'email': 'This field is required.',
-            'privacy policy': 'You must accept our Privacy Policy.'
+            'privacy policy': 'This field is required.'
         };
     }
 
@@ -51,6 +51,7 @@ class PageQaTask {
             await this.buttonAcceptCookies.click();
         }
     }
+
     async verifyFieldValidation(fieldName, expectedMessage = null) {
         const fieldKey = fieldName.toLowerCase();
         const validationElement = this.validationElements[fieldKey];
@@ -64,23 +65,6 @@ class PageQaTask {
         await expect(validationElement).toBeVisible();
         await expect(validationElement).toHaveText(message);
     }
-
-
-    /*async verifyFirstNameValidation(expectedMessage = "This field is required.") {
-        await this.verifyFieldValidation('first name', expectedMessage);
-    }
-
-    async verifyLastNameValidation(expectedMessage = "This field is required.") {
-        await this.verifyFieldValidation('last name', expectedMessage);
-    }
-
-    async verifyEmailValidation(expectedMessage = "This field is required.") {
-        await this.verifyFieldValidation('email', expectedMessage);
-    }
-
-    async verifyPrivacyPolicyValidation(expectedMessage = "You must accept our Privacy Policy.") {
-        await this.verifyFieldValidation('privacy policy', expectedMessage);
-    }*/
 
     async fillFirstName(firstName) {
         await this.inputFirstName.fill(firstName);
